@@ -11,4 +11,10 @@
     <string name="welcome_text_one">Welcome to our yarn store\'s inventory</string>
     <string name="welcome_text_two">Ready to learn how to use this app?</string>
     <string name="welcome_instructions_button_text">Instructions</string>
+    <string name="instructions_title_text">Instructions</string>
+    <string name="instructions_text_one">How to use the Yarnit! store inventory</string>
+    <string name="instructions_text_two">First, look at the list of existing yarn inventory.</string>
+    <string name="instructions_text_three">Once you\'re in the list, if there\'s a yarn item on the shelf that\'s not in the list, click the Add Yarn Button.</string>
+    <string name="instructions_text_four">Easy, right? Let\'s go! Click below to open the inventory list.</string>
+    <string name="list_button_text">Inventory List</string>
 </resources>
