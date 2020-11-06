@@ -17,4 +17,5 @@
     <string name="instructions_text_three">Once you\'re in the list, if there\'s a yarn item on the shelf that\'s not in the list, click the Add Yarn Button.</string>
     <string name="instructions_text_four">Easy, right? Let\'s go! Click below to open the inventory list.</string>
     <string name="list_button_text">Inventory List</string>
+    <string name="yarn_list_title_text">Yarnit! Inventory List</string>
 </resources>
