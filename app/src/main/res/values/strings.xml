@@ -18,4 +18,11 @@
     <string name="instructions_text_four">Easy, right? Let\'s go! Click below to open the inventory list.</string>
     <string name="list_button_text">Inventory List</string>
     <string name="yarn_list_title_text">Yarnit! Inventory List</string>
+    <string name="add_yarn_detail_title">Add a New Yarn</string>
+    <string name="yarn_color_name">New Yarn Color</string>
+    <string name="yarn_company_brand">Yarn Company/Brand</string>
+    <string name="yarn_weight">Yarn Weight</string>
+    <string name="yarn_description_type">Yarn Description or Type</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="save_button_text">Save</string>
 </resources>
