@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.crayonwriter.yarnit.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.crayonwriter.yarnit.InstructionsFragment"
+        android:label="fragment_instructions"
+        tools:layout="@layout/fragment_instructions" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_yarnListFragment"
+            app:destination="@id/yarnListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yarnListFragment"
+        android:name="com.crayonwriter.yarnit.YarnListFragment"
+        android:label="fragment_yarn_list"
+        tools:layout="@layout/fragment_yarn_list" >
+        <action
+            android:id="@+id/action_yarnListFragment_to_addYarnDetailFragment"
+            app:destination="@id/addYarnDetailFragment" />
+        <action
+            android:id="@+id/action_yarnListFragment_to_addYarnDetailFragment2"
+            app:destination="@id/addYarnDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addYarnDetailFragment"
+        android:name="com.crayonwriter.yarnit.AddYarnDetailFragment"
+        android:label="fragment_add_yarn_detail"
+        tools:layout="@layout/fragment_add_yarn_detail" >
+        <action
+            android:id="@+id/action_addYarnDetailFragment_to_yarnListFragment"
+            app:destination="@id/yarnListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.crayonwriter.yarnit.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+</navigation>
