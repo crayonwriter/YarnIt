@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/welcomeFragment">
+    app:startDestination="@id/fragment_welcome">
 
     <fragment
-        android:id="@+id/welcomeFragment"
+        android:id="@+id/fragment_welcome"
         android:name="com.crayonwriter.yarnit.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
@@ -51,6 +51,6 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            app:destination="@id/fragment_welcome" />
     </fragment>
 </navigation>

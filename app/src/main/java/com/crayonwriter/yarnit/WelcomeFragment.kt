@@ -13,17 +13,14 @@ class WelcomeFragment : Fragment() {
     private lateinit var binding: FragmentWelcomeBinding
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
-// Inflate view and obtain an instance of the binding class
-        binding = DataBindingUtil.inflate(
-                inflater,
-                R.id.WelcomeFragmentLayout,
+        // Inflate the layout for this fragment
+        binding = DataBindingUtil.inflate(inflater,
+                R.layout.fragment_welcome,
                 container,
-                false
-
-        )
-return binding.root
+                false)
+        return binding.root
     }
 }
