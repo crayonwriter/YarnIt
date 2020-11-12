@@ -15,7 +15,7 @@ class YarnListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-            binding = DataBindingUtil.inflate(inflater, R.id.yarnListFragment, container, false)
+            binding = DataBindingUtil.inflate(inflater, R.layout.fragment_yarn_list, container, false)
             return binding.root
     }
 }

@@ -17,7 +17,7 @@ private lateinit var binding: FragmentInstructionsBinding
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-       binding = DataBindingUtil.inflate(inflater, R.id.instructionsFragment, container, false)
+       binding = DataBindingUtil.inflate(inflater, R.layout.fragment_instructions, container, false)
        return binding.root
     }
 }

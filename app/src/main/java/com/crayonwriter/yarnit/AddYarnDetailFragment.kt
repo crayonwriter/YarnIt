@@ -16,7 +16,7 @@ class AddYarnDetailFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.id.addYarnDetailFragment, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_yarn_detail, container, false)
         return binding.root
     }
 }
