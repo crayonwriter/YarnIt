@@ -31,9 +31,6 @@
         <action
             android:id="@+id/action_yarnListFragment_to_addYarnDetailFragment"
             app:destination="@id/addYarnDetailFragment" />
-        <action
-            android:id="@+id/action_yarnListFragment_to_addYarnDetailFragment2"
-            app:destination="@id/addYarnDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/addYarnDetailFragment"
