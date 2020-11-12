@@ -1,4 +1,11 @@
 package com.crayonwriter.yarnit
 
-class YarnListViewModel {
+import androidx.lifecycle.ViewModel
+
+class YarnListViewModel : ViewModel() {
+    private lateinit var yarnNameList : MutableList<String>
+
+init {
+    
+}
 }
