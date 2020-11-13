@@ -6,6 +6,6 @@ class YarnListViewModel : ViewModel() {
     private lateinit var yarnNameList : MutableList<String>
 
 init {
-    
+
 }
 }

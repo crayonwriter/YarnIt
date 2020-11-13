@@ -57,4 +57,10 @@ dependencies {
 
     // Feature module Support
     implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
-    }
+
+    //Add Timber library
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+
+}
+
