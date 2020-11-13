@@ -24,6 +24,7 @@ class YarnListFragment : Fragment() {
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
             viewModel =ViewModelProvider(this).get(YarnListViewModel::class.java)
+            binding.yarnListText.text = viewModel.yarnNameList
 
             binding.floatingActionButton2.setOnClickListener(
                     Navigation.createNavigateOnClickListener(R.id.action_yarnListFragment_to_addYarnDetailFragment)

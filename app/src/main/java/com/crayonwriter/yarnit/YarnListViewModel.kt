@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import timber.log.Timber
 
 class YarnListViewModel : ViewModel() {
-    private lateinit var yarnNameList: MutableList<String>
+    lateinit var yarnNameList: MutableList<String>
 
     init {
         Timber.i("YarnListViewModel created!")
