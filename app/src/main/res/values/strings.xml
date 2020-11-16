@@ -25,4 +25,8 @@
     <string name="yarn_description_type">Yarn Description or Type</string>
     <string name="cancel_button_text">Cancel</string>
     <string name="save_button_text">Save</string>
+    <string name="yarnColorHint">New yarn\'s color</string>
+    <string name="yarnBrandHint">New Yarn\'s Brand</string>
+    <string name="yarnWeightHint">New Yarn\'s Weight</string>
+    <string name="yarnDescriptionHint">New Yarn\'s Description</string>
 </resources>

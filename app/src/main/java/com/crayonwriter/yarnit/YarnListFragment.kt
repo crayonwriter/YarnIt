@@ -1,14 +1,19 @@
 package com.crayonwriter.yarnit
 
 import android.os.Bundle
+import android.text.Layout
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.inflate
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.findFragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding.inflate
 import com.crayonwriter.yarnit.databinding.FragmentYarnListBinding
 
 class YarnListFragment : Fragment() {
@@ -25,12 +30,16 @@ class YarnListFragment : Fragment() {
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
             viewModel =ViewModelProvider(this).get(YarnListViewModel::class.java)
-            binding.yarnListText.text = viewModel.yarnNameList.toString()
-
+            //binding.yarnListText.text = viewModel.yarnNameList.toString()
+            var linearLayout: LinearLayout? = view?.findViewById(R.id.yarnlist_layout)
+          val view: View = layoutInflater.inflate(R.layout.yarn_item, null)
+//            val yarnItem: Layout = view.findViewById(R.id.yarnItemColor+R.id.yarnItemBrand+R.id.yarnItemWeight+R.id.yarnItemDescription)
+//yarnItem.
+linearLayout?.addView(view)
             binding.floatingActionButton2.setOnClickListener(
                     Navigation.createNavigateOnClickListener(R.id.action_yarnListFragment_to_addYarnDetailFragment)
             )
-
-           return binding.root
+return linearLayout
+           //return binding.root
     }
 }

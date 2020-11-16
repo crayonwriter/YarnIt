@@ -1,6 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/yarnItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/yarnItemColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yarnColorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yarn_color_name"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="99dp" />
+
+        <EditText
+            android:id="@+id/yarnColorEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/yarnColorHint"
+            android:inputType="textPersonName"
+            android:text="@string/yarn_color_name"
+            tools:layout_editor_absoluteX="203dp"
+            tools:layout_editor_absoluteY="84dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/yarnItemBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yarnBrandText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yarn_company_brand"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="188dp" />
+
+        <EditText
+            android:id="@+id/yarnBrandEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/yarnBrandHint"
+            android:inputType="textPersonName"
+            android:text="@string/yarn_company_brand"
+            tools:layout_editor_absoluteX="202dp"
+            tools:layout_editor_absoluteY="162dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/yarnItemWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yarnWeightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yarn_weight"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="250dp" />
+
+        <EditText
+            android:id="@+id/yarnWeightEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/yarnWeightHint"
+            android:inputType="textPersonName"
+            android:text="@string/yarn_weight"
+            tools:layout_editor_absoluteX="202dp"
+            tools:layout_editor_absoluteY="232dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/yarnItemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yarnDescriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yarn_description_type"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="309dp" />
+
+        <EditText
+            android:id="@+id/yarnDescriptionEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/yarnDescriptionHint"
+            android:inputType="textPersonName"
+            android:text="@string/yarn_description_type"
+            tools:layout_editor_absoluteX="205dp"
+            tools:layout_editor_absoluteY="293dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+
+</LinearLayout>
