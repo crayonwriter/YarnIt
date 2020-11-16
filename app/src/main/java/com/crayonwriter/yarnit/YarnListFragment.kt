@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
@@ -24,12 +25,12 @@ class YarnListFragment : Fragment() {
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
             viewModel =ViewModelProvider(this).get(YarnListViewModel::class.java)
-            binding.yarnListText.text = viewModel.yarnNameList
+            binding.yarnListText.text = viewModel.yarnNameList.toString()
 
             binding.floatingActionButton2.setOnClickListener(
                     Navigation.createNavigateOnClickListener(R.id.action_yarnListFragment_to_addYarnDetailFragment)
             )
 
-            return binding.root
+           return binding.root
     }
 }
