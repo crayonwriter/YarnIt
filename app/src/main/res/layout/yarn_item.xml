@@ -4,142 +4,132 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/yarnlist_layout"
-            android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/yarnlist_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/yarnItemColor"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/yarnItemColor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toStartOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/yarnColorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:text="@string/yarnColorLabel"
+            app:layout_constraintBottom_toBottomOf="@+id/yarnColorEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/yarnColorEditText" />
 
-            <TextView
-                android:id="@+id/yarnColorText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="26dp"
-                android:text="@string/yarnColorLabel"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="85dp" />
+        <TextView
+            android:id="@+id/yarnColorEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="85dp"
+            android:layout_marginEnd="52dp"
+            android:ems="10"
+            android:hint="@string/yarnColorHint"
+            android:inputType="textPersonName"
+            android:text="@string/blackColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/yarnColorEditText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/yarnColorHint"
-                android:inputType="textPersonName"
-                android:text="@string/blackColor"
-                tools:layout_editor_absoluteX="195dp"
-                tools:layout_editor_absoluteY="85dp" />
-
-            <TextView
-                android:id="@+id/yarnBrandText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="21dp"
-                android:text="@string/yarnBrandLabel"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/yarnColorText" />
+        <TextView
+            android:id="@+id/yarnBrandText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="21dp"
+            android:text="@string/yarnBrandLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yarnColorText" />
 
 
-            <TextView
-                android:id="@+id/yarnBrandEditText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="21dp"
-                android:ems="10"
-                android:hint="@string/yarnBrandHint"
-                android:inputType="textPersonName"
-                android:text="@string/bernatBrand"
-                app:layout_constraintStart_toStartOf="@+id/yarnColorEditText"
-                app:layout_constraintTop_toBottomOf="@+id/yarnColorEditText" />
+        <TextView
+            android:id="@+id/yarnBrandEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:ems="10"
+            android:hint="@string/yarnBrandHint"
+            android:inputType="textPersonName"
+            android:text="@string/bernatBrand"
+            app:layout_constraintStart_toStartOf="@+id/yarnColorEditText"
+            app:layout_constraintTop_toBottomOf="@+id/yarnColorEditText" />
 
-            <TextView
-                android:id="@+id/yarnWeightText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:text="@string/yarn_weight"
-                app:layout_constraintStart_toStartOf="@+id/yarnBrandText"
-                app:layout_constraintTop_toBottomOf="@+id/yarnBrandText" />
-
-
-            <TextView
-                android:id="@+id/yarnWeightEditText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:ems="10"
-                android:hint="@string/yarnWeightHint"
-                android:inputType="textPersonName"
-                android:text="@string/bulkyWeight"
-                app:layout_constraintStart_toStartOf="@+id/yarnBrandEditText"
-                app:layout_constraintTop_toBottomOf="@+id/yarnBrandEditText" />
-
-            <TextView
-                android:id="@+id/yarnDescriptionText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="@string/yarn_description_type"
-                app:layout_constraintBottom_toTopOf="@+id/divider"
-                app:layout_constraintEnd_toEndOf="@+id/yarnWeightText"
-                app:layout_constraintStart_toEndOf="@+id/yarnWeightText" />
-
-            <TextView
-                android:id="@+id/yarnDescriptionEditText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:ems="10"
-                android:hint="@string/yarnDescriptionHint"
-                android:inputType="textPersonName"
-                android:text="@string/cottonAcrylicYarnType"
-                app:layout_constraintBottom_toTopOf="@+id/divider"
-                app:layout_constraintStart_toStartOf="@+id/yarnWeightEditText" />
+        <TextView
+            android:id="@+id/yarnWeightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="@string/yarn_weight"
+            app:layout_constraintStart_toStartOf="@+id/yarnBrandText"
+            app:layout_constraintTop_toBottomOf="@+id/yarnBrandText" />
 
 
-            <View
-                android:id="@+id/divider"
-                android:layout_width="0dp"
-                android:layout_height="5dp"
-                android:layout_marginTop="41dp"
-                android:background="?android:attr/listDivider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/yarnWeightText" />
+        <TextView
+            android:id="@+id/yarnWeightEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:ems="10"
+            android:hint="@string/yarnWeightHint"
+            android:inputType="textPersonName"
+            android:text="@string/bulkyWeight"
+            app:layout_constraintStart_toStartOf="@+id/yarnBrandEditText"
+            app:layout_constraintTop_toBottomOf="@+id/yarnBrandEditText" />
 
-            <TextView
-                android:id="@+id/addYarnListText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/yarnDescriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/yarn_description_type"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="@+id/yarnWeightText"
+            app:layout_constraintStart_toEndOf="@+id/yarnWeightText" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="52dp"
-                android:layout_marginBottom="168dp"
-                android:clickable="true"
-                android:src="@android:drawable/ic_input_add"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/addYarnListText"
-                app:layout_constraintVertical_bias="1.0" />
+        <TextView
+            android:id="@+id/yarnDescriptionEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="@string/yarnDescriptionHint"
+            android:inputType="textPersonName"
+            android:text="@string/cottonAcrylicYarnType"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="@+id/yarnWeightEditText" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="41dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yarnWeightText" />
+
+        <TextView
+            android:id="@+id/addNewYarnLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
 
     <!--<?xml version="1.0" encoding="utf-8"?>-->
