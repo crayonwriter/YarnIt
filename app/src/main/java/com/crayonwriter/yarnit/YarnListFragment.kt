@@ -30,8 +30,9 @@ class YarnListFragment : Fragment() {
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
             viewModel =ViewModelProvider(this).get(YarnListViewModel::class.java)
             var linearLayout: LinearLayout? = view?.findViewById(R.id.yarnlist_layout)
-          val view: View = layoutInflater.inflate(R.layout.yarn_item, null)
-        //Add a view to the linear layout programatically
+
+            //Add a view to the linear layout programatically
+            val view: View = layoutInflater.inflate(R.layout.yarn_item, null)
             linearLayout?.addView(view)
 
             //Connect the FAB
