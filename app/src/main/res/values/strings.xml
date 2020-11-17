@@ -29,4 +29,10 @@
     <string name="yarnBrandHint">New Yarn\'s Brand</string>
     <string name="yarnWeightHint">New Yarn\'s Weight</string>
     <string name="yarnDescriptionHint">New Yarn\'s Description</string>
+    <string name="yarnColorLabel">Yarn Color</string>
+    <string name="royalBlueColor">Royal Blue</string>
+    <string name="yarnBrandLabel">Yarn Brand</string>
+    <string name="redHeartSuperSaverBrand">Red Heart Super Saver</string>
+    <string name="worstedWeightFour">Worsted Weight/4</string>
+    <string name="acrylicYarnType">Acrylic</string>
 </resources>
