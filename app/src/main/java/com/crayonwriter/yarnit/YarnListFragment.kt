@@ -27,19 +27,18 @@ class YarnListFragment : Fragment() {
         // Inflate the layout for this fragment
             binding = DataBindingUtil.inflate(inflater, R.layout.fragment_yarn_list, container, false)
 
-
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
             viewModel =ViewModelProvider(this).get(YarnListViewModel::class.java)
-            //binding.yarnListText.text = viewModel.yarnNameList.toString()
             var linearLayout: LinearLayout? = view?.findViewById(R.id.yarnlist_layout)
           val view: View = layoutInflater.inflate(R.layout.yarn_item, null)
-//            val yarnItem: Layout = view.findViewById(R.id.yarnItemColor+R.id.yarnItemBrand+R.id.yarnItemWeight+R.id.yarnItemDescription)
-//yarnItem.
-linearLayout?.addView(view)
+        //Add a view to the linear layout programatically
+            linearLayout?.addView(view)
+
+            //Connect the FAB
             binding.floatingActionButton2.setOnClickListener(
                     Navigation.createNavigateOnClickListener(R.id.action_yarnListFragment_to_addYarnDetailFragment)
             )
-return linearLayout
-           //return binding.root
+//return linearLayout
+           return binding.root
     }
 }
