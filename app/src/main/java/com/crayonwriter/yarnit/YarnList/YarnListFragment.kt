@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.crayonwriter.yarnit.R
 import com.crayonwriter.yarnit.databinding.FragmentYarnListBinding
+import timber.log.Timber
 
 class YarnListFragment : Fragment() {
     private lateinit var binding: FragmentYarnListBinding
@@ -23,6 +24,7 @@ class YarnListFragment : Fragment() {
             binding = DataBindingUtil.inflate(inflater, R.layout.fragment_yarn_list, container, false)
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
+            Timber.i("Called ViewModelProvider!!")
             viewModel =ViewModelProvider(this).get(YarnListViewModel::class.java)
 
 
