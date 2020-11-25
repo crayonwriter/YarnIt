@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/yarnListFragment"
-        android:name="com.crayonwriter.yarnit.YarnListFragment"
+        android:name="com.crayonwriter.yarnit.YarnList.YarnListFragment"
         android:label="fragment_yarn_list"
         tools:layout="@layout/fragment_yarn_list" >
         <action

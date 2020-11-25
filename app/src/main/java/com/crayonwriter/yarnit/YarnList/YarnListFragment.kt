@@ -1,20 +1,14 @@
-package com.crayonwriter.yarnit
+package com.crayonwriter.yarnit.YarnList
 
 import android.os.Bundle
-import android.text.Layout
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.inflate
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.findFragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding.inflate
+import com.crayonwriter.yarnit.R
 import com.crayonwriter.yarnit.databinding.FragmentYarnListBinding
 
 class YarnListFragment : Fragment() {
