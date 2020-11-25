@@ -24,6 +24,7 @@ class WelcomeFragment : Fragment() {
                 container,
                 false)
 
+        //Navigation - belongs here in this UI Controller
         binding.WelcomeInstructionsButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.action_fragment_welcome_to_fragment_instructions))
 
