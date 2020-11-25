@@ -21,6 +21,7 @@ private lateinit var binding: FragmentInstructionsBinding
         // Inflate the layout for this fragment
        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_instructions, container, false)
 
+       //Navigation - belongs in this UI Controller class
        binding.listButton.setOnClickListener(
                Navigation.createNavigateOnClickListener(R.id.action_fragment_instructions_to_yarnListFragment)
        )

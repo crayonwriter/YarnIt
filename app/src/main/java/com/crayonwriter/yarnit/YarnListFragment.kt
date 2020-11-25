@@ -9,6 +9,7 @@ import android.view.View.inflate
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.findFragment
 import androidx.lifecycle.ViewModelProvider
@@ -29,17 +30,19 @@ class YarnListFragment : Fragment() {
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
             viewModel =ViewModelProvider(this).get(YarnListViewModel::class.java)
-            var linearLayout: LinearLayout? = view?.findViewById(R.id.yarnlist_layout)
+
+
+
 
             //Add a view to the linear layout programatically
-            val view: View = layoutInflater.inflate(R.layout.yarn_item, null)
-            linearLayout?.addView(view)
+
+
 
             //Connect the FAB
-            binding.floatingActionButton2.setOnClickListener(
-                    Navigation.createNavigateOnClickListener(R.id.action_yarnListFragment_to_addYarnDetailFragment)
+            binding.floatingActionButton2.setOnClickListener (
+               Navigation.createNavigateOnClickListener(R.id.action_yarnListFragment_to_addYarnDetailFragment)
             )
-//return linearLayout
+
            return binding.root
     }
 }

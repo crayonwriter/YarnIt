@@ -8,16 +8,18 @@ class YarnListViewModel : ViewModel() {
 
     init {
         Timber.i("YarnListViewModel created!")
-        showYarnNameList()
+        //showYarnNameList()
     }
 
+    
 
-    private fun showYarnNameList() {
-        yarnNameList = mutableListOf(
-                "Bernat Bulky",
-                "Red Heart Soft",
-                "Caron Super Soft"
-        )
-        yarnNameList.sort()
-    }
+
+//    private fun showYarnNameList() {
+//        yarnNameList = mutableListOf(
+//                "Bernat Bulky",
+//                "Red Heart Soft",
+//                "Caron Super Soft"
+//        )
+//        yarnNameList.sort()
+ //   }
 }
