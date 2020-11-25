@@ -27,14 +27,9 @@ class YarnListFragment : Fragment() {
             Timber.i("Called ViewModelProvider!!")
             viewModel =ViewModelProvider(this).get(YarnListViewModel::class.java)
 
+        //Add a view to the linear layout programatically
 
-
-
-            //Add a view to the linear layout programatically
-
-
-
-            //Connect the FAB - Navigation, here in the UI Controller class
+        //Connect the FAB - Navigation, here in the UI Controller class
             binding.floatingActionButton2.setOnClickListener (
                Navigation.createNavigateOnClickListener(R.id.action_yarnListFragment_to_addYarnDetailFragment)
             )
