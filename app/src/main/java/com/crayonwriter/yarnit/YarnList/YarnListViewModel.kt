@@ -1,5 +1,6 @@
 package com.crayonwriter.yarnit.YarnList
 
+import android.view.View
 import androidx.lifecycle.ViewModel
 import timber.log.Timber
 
@@ -7,7 +8,7 @@ class YarnListViewModel : ViewModel() {
     init {
         Timber.i("YarnListViewModel CREATED!")
 
-        addViewToList()
+        //addViewToList(newTextView)
     }
 
     override fun onCleared() {
@@ -17,8 +18,8 @@ class YarnListViewModel : ViewModel() {
 
     //TODO: Add a method that adds a view to the list
 
-     fun addViewToList() {
-         
+     fun addViewToList(newTextView: View) {
+
     }
 
     //Todo: Call the method from the detail fragment that saves the added view? Not sure. Something to do with...

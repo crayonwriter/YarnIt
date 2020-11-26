@@ -4,91 +4,106 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" >
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/AddYarnDetailFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AddYarnDetailFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AddYarnDetailFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddYarnDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/AddYarnDetailTitle"
-        style="@style/PageTitleStyle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:text="@string/add_yarn_detail_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/AddYarnDetailTitle"
+            style="@style/PageTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:text="@string/add_yarn_detail_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/YarnColorName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="50dp"
-        android:ems="10"
-        android:hint="@string/yarn_color_name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/YarnCompanyBrand"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/YarnColorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/yarn_color_name"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AddYarnDetailTitle" />
 
-    <EditText
-        android:id="@+id/YarnCompanyBrand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="243dp"
-        android:ems="10"
-        android:hint="@string/yarn_company_brand"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/YarnColorNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SaveButtonText"
+            tools:text="Test color name">
 
-    <EditText
-        android:id="@+id/YarnWeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="70dp"
-        android:ems="10"
-        android:hint="@string/yarn_weight"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/YarnCompanyBrand" />
+        </TextView>
 
-    <EditText
-        android:id="@+id/YarnDescriptionType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="72dp"
-        android:ems="10"
-        android:hint="@string/yarn_description_type"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/YarnWeight" />
+        <EditText
+            android:id="@+id/YarnCompanyBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/yarn_company_brand"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/YarnColorName"
+            app:layout_constraintTop_toBottomOf="@+id/YarnColorName" />
 
-    <Button
-        android:id="@+id/CancelButtonText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="67dp"
-        android:layout_marginBottom="213dp"
-        android:text="@string/cancel_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/YarnWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/yarn_weight"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/YarnCompanyBrand"
+            app:layout_constraintTop_toBottomOf="@+id/YarnCompanyBrand" />
 
-    <Button
-        android:id="@+id/SaveButtonText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="209dp"
-        android:text="@string/save_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <EditText
+            android:id="@+id/YarnDescriptionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/yarn_description_type"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/YarnWeight"
+            app:layout_constraintTop_toBottomOf="@+id/YarnWeight" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/CancelButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="91dp"
+            android:layout_marginBottom="33dp"
+            android:text="@string/cancel_button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/SaveButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:text="@string/save_button_text"
+            app:layout_constraintEnd_toEndOf="@+id/YarnDescriptionType"
+            app:layout_constraintStart_toStartOf="@+id/YarnDescriptionType"
+            app:layout_constraintTop_toBottomOf="@+id/YarnDescriptionType" />
+
+        <TextView
+            android:id="@+id/yarnColorBrandText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/YarnColorNameText"
+            app:layout_constraintStart_toEndOf="@+id/SaveButtonText"
+            tools:text="Brand text test" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
