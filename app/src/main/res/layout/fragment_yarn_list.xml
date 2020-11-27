@@ -139,7 +139,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/addNewYarnLayout"
+                android:id="@+id/addNewYarnTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="350dp"
