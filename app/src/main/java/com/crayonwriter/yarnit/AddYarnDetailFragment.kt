@@ -36,12 +36,12 @@ class AddYarnDetailFragment : Fragment() {
        viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
 
 
-color = view?.findViewById(R.id.YarnColorName)
+color = binding.YarnColorName
 
 
         //TODO: Make the button be observable and have it call a method to update the YarnListFragment with a new layout
         binding.SaveButtonText.setOnClickListener {
-            binding.YarnColorNameText.setText(color.toString())
+            binding.YarnColorNameText.setText(color?.text.toString())
 
         }
 
