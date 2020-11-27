@@ -12,6 +12,8 @@ import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.crayonwriter.yarnit.YarnList.YarnListViewModel
 import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding
 import timber.log.Timber
@@ -28,7 +30,7 @@ class AddYarnDetailFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_yarn_detail, container, false)
 
-        binding.YarnColorNameText.setText("Test")
+        //binding.YarnColorNameText.setText("Test")
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
         //viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
@@ -37,8 +39,10 @@ class AddYarnDetailFragment : Fragment() {
 
         //TODO: Make the button be observable and have it call a method to update the YarnListFragment with a new layout
         binding.SaveButtonText.setOnClickListener {
-            binding.YarnColorNameText.setText(color?.text.toString())
+            this.findNavController().navigate(R.id.action_addYarnDetailFragment_to_yarnListFragment)
             viewModel.setDataColor(color?.text.toString())
+            //binding.YarnColorNameText.setText(color?.text.toString())
+
 
         }
 
