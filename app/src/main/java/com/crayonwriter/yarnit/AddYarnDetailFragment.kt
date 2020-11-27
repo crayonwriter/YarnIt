@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import com.crayonwriter.yarnit.YarnList.YarnListViewModel
 import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding
@@ -17,7 +18,7 @@ import timber.log.Timber
 
 class AddYarnDetailFragment : Fragment() {
     private lateinit var binding: FragmentAddYarnDetailBinding
-    private lateinit var viewModel: YarnListViewModel
+    private val viewModel: YarnListViewModel by activityViewModels()
     private var color: EditText? = null
 
     override fun onCreateView(
@@ -30,13 +31,14 @@ class AddYarnDetailFragment : Fragment() {
         binding.YarnColorNameText.setText("Test")
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
-        viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
+        //viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
 
         color = binding.YarnColorName
 
         //TODO: Make the button be observable and have it call a method to update the YarnListFragment with a new layout
         binding.SaveButtonText.setOnClickListener {
             binding.YarnColorNameText.setText(color?.text.toString())
+
         }
 
         return binding.root

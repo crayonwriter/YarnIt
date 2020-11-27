@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.crayonwriter.yarnit.R
@@ -14,7 +16,8 @@ import timber.log.Timber
 
 class YarnListFragment : Fragment() {
     private lateinit var binding: FragmentYarnListBinding
-    private lateinit var viewModel: YarnListViewModel
+    private val viewModel: YarnListViewModel by activityViewModels()
+    private lateinit var addNewYarnTextView: TextView
 
         override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,9 +28,14 @@ class YarnListFragment : Fragment() {
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
             Timber.i("Called ViewModelProvider!!")
-            viewModel =ViewModelProvider(this).get(YarnListViewModel::class.java)
+            //viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
+            //viewModel.addViewToList(addNewYarnTextView)
 
-        //Add a view to the linear layout programatically
+        //TODO Add a view to the linear layout programatically
+            //addNewYarnTextView =
+            //addNewYarnTextView = getText(binding.yarnColorNameText)
+            //addNewYarnTextView.textSize = 20f
+            //addNewYarnTextView.text = binding.y
 
         //Connect the FAB - Navigation, here in the UI Controller class
             binding.floatingActionButton2.setOnClickListener (

@@ -1,10 +1,20 @@
 package com.crayonwriter.yarnit.YarnList
 
 import android.view.View
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import timber.log.Timber
 
 class YarnListViewModel : ViewModel() {
+
+    //Define a MutableLiveData variable for the changed color field
+    val dataFromAddYarnColor = MutableLiveData<Any>()
+
+    //Create function to store color data to send between fragments
+    fun setDataColor(color: String){
+        dataFromAddYarnColor.setValue(color)
+    }
+
     init {
         Timber.i("YarnListViewModel CREATED!")
 
