@@ -39,7 +39,7 @@ class YarnListFragment : Fragment() {
                     addNewYarn.text = t.toString()
                 }
             })
-            
+
         //Connect the FAB - Navigation, here in the UI Controller class
             binding.floatingActionButton2.setOnClickListener (
                Navigation.createNavigateOnClickListener(R.id.action_yarnListFragment_to_addYarnDetailFragment)
