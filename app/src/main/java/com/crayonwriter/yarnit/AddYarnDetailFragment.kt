@@ -18,10 +18,7 @@ import timber.log.Timber
 class AddYarnDetailFragment : Fragment() {
     private lateinit var binding: FragmentAddYarnDetailBinding
     private lateinit var viewModel: YarnListViewModel
-    private lateinit var newTextView: View
     private var color: EditText? = null
-    private lateinit var brand: EditText
-    private lateinit var yarnColorNameText: TextView
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -31,22 +28,16 @@ class AddYarnDetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_yarn_detail, container, false)
 
         binding.YarnColorNameText.setText("Test")
+
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
-        Timber.i("Called ViewModelProvider for the Details")
-       viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
 
-
-color = binding.YarnColorName
-
+        color = binding.YarnColorName
 
         //TODO: Make the button be observable and have it call a method to update the YarnListFragment with a new layout
         binding.SaveButtonText.setOnClickListener {
             binding.YarnColorNameText.setText(color?.text.toString())
-
         }
-
-
-
 
         return binding.root
     }
