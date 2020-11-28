@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -18,11 +19,12 @@ import timber.log.Timber
 class YarnListFragment : Fragment() {
     private lateinit var binding: FragmentYarnListBinding
     private val viewModel: YarnListViewModel by activityViewModels()
-    private lateinit var addNewYarn: TextView
+
 
         override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
         // Inflate the layout for this fragment
             binding = DataBindingUtil.inflate(inflater, R.layout.fragment_yarn_list, container, false)
@@ -42,6 +44,7 @@ class YarnListFragment : Fragment() {
             viewModel.dataFromAddYarnColor.observe(viewLifecycleOwner, Observer {newTextView ->
                 binding.addNewYarnTextView.text = newTextView.toString()
             })
+
 
         //Connect the FAB - Navigation, here in the UI Controller class
             binding.floatingActionButton2.setOnClickListener (
