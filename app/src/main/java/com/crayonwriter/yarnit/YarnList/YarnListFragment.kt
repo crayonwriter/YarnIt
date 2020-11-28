@@ -33,11 +33,14 @@ class YarnListFragment : Fragment() {
             //viewModel.addViewToList(addNewYarnTextView)
 
         //TODO Add a view to the linear layout programatically
-            addNewYarn = binding.addNewYarnTextView
-            viewModel.dataFromAddYarnColor.observe(viewLifecycleOwner, object: Observer<Any> {
-                override fun onChanged(t: Any?) {
-                    addNewYarn.text = t.toString()
-                }
+
+            //addNewYarn = binding.addNewYarnTextView
+            //This viewModel is observing the liveData in the ViewModel
+            //viewModel.dataFromAddYarnColor.observe(viewLifecycleOwner, object: Observer<Any> {
+              //  override fun onChanged(t: Any?) {
+               //     addNewYarn.text = t.toString()
+            viewModel.dataFromAddYarnColor.observe(viewLifecycleOwner, Observer {newTextView ->
+                binding.addNewYarnTextView.text = newTextView.toString()
             })
 
         //Connect the FAB - Navigation, here in the UI Controller class
