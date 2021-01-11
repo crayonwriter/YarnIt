@@ -1,4 +1,4 @@
-package com.crayonwriter.yarnit.YarnList
+package com.crayonwriter.yarnit
 
 import android.view.View
 import androidx.lifecycle.MutableLiveData

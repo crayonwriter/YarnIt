@@ -7,17 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-import com.crayonwriter.yarnit.YarnList.YarnListViewModel
 import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding
-import timber.log.Timber
 
 class AddYarnDetailFragment : Fragment() {
     private lateinit var binding: FragmentAddYarnDetailBinding

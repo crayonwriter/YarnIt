@@ -6,8 +6,8 @@
     
     <data>
         <variable
-            name="YarnListViewModel"
-            type="com.crayonwriter.yarnit.YarnList.YarnListViewModel" />
+            name="yarnListViewModel"
+            type="com.crayonwriter.yarnit.YarnListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -97,7 +97,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="33dp"
             android:text="@string/save_button_text"
-            android:onClick="@{() -> YarnListViewModel.addViewToList()}"
             app:layout_constraintEnd_toEndOf="@+id/YarnDescriptionType"
             app:layout_constraintStart_toStartOf="@+id/YarnDescriptionType"
             app:layout_constraintTop_toBottomOf="@+id/YarnDescriptionType" />
