@@ -18,8 +18,7 @@ import timber.log.Timber
 
 class YarnListFragment : Fragment() {
     private lateinit var binding: FragmentYarnListBinding
-    private val viewModel: YarnListViewModel by activityViewModels()
-
+    private lateinit var viewModel: YarnListViewModel
 
         override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +30,7 @@ class YarnListFragment : Fragment() {
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
             Timber.i("Called ViewModelProvider!!")
-            //viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
+            viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
             //viewModel.addViewToList(addNewYarnTextView)
 
         //TODO Add a view to the linear layout programatically

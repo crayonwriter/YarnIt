@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
@@ -20,8 +21,9 @@ import timber.log.Timber
 
 class AddYarnDetailFragment : Fragment() {
     private lateinit var binding: FragmentAddYarnDetailBinding
-    private val viewModel: YarnListViewModel by activityViewModels()
+    private lateinit var viewModel: YarnListViewModel
     private var color: EditText? = null
+    private lateinit var layout: Layout
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +35,8 @@ class AddYarnDetailFragment : Fragment() {
         //binding.YarnColorNameText.setText("Test")
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
-        //viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
+      // viewModel.dataFromAddYarnColor.observe(LifecycleOwner {  })
 
         color = binding.YarnColorName
 
@@ -41,6 +44,8 @@ class AddYarnDetailFragment : Fragment() {
         binding.SaveButtonText.setOnClickListener {
             this.findNavController().navigate(R.id.action_addYarnDetailFragment_to_yarnListFragment)
             viewModel.setDataColor(color?.text.toString())
+
+
             //binding.YarnColorNameText.setText(color?.text.toString())
 
 
