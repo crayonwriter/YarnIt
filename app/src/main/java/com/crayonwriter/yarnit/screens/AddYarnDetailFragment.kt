@@ -1,4 +1,4 @@
-package com.crayonwriter.yarnit
+package com.crayonwriter.yarnit.screens
 
 import android.os.Bundle
 import android.text.Layout
@@ -10,11 +10,13 @@ import android.widget.EditText
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.crayonwriter.yarnit.R
+import com.crayonwriter.yarnit.YarnlistViewModel
 import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding
 
 class AddYarnDetailFragment : Fragment() {
     private lateinit var binding: FragmentAddYarnDetailBinding
-    private lateinit var viewModel: YarnListViewModel
+    private lateinit var viewModel: YarnlistViewModel
     private var color: EditText? = null
     private lateinit var layout: Layout
 
@@ -28,7 +30,7 @@ class AddYarnDetailFragment : Fragment() {
         //binding.YarnColorNameText.setText("Test")
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
-        viewModel = ViewModelProvider(this).get(YarnListViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(YarnlistViewModel::class.java)
       // viewModel.dataFromAddYarnColor.observe(LifecycleOwner {  })
 
         color = binding.YarnColorName

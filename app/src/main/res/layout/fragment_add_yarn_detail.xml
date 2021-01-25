@@ -7,14 +7,14 @@
     <data>
         <variable
             name="yarnListViewModel"
-            type="com.crayonwriter.yarnit.YarnListViewModel" />
+            type="com.crayonwriter.yarnit.YarnlistViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/AddYarnDetailFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".AddYarnDetailFragment">
+        tools:context=".screens.AddYarnDetailFragment">
         
         <TextView
             android:id="@+id/AddYarnDetailTitle"

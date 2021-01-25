@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import timber.log.Timber
 
-class YarnListViewModel : ViewModel() {
+class YarnlistViewModel : ViewModel() {
 
     private val _liveColor = MutableLiveData<String>()
     val liveColor: LiveData<String>
