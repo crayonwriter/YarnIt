@@ -33,10 +33,10 @@ class AddYarnDetailFragment : Fragment() {
 
         color = binding.YarnColorName
 
-        //TODO: Make the button be observable and have it call a method to update the YarnListFragment with a new layout
+        //TODO: Make the button be observable and have it call a method to update the YarnListFragment with a new textview
         binding.SaveButtonText.setOnClickListener {
             this.findNavController().navigate(R.id.action_addYarnDetailFragment_to_yarnListFragment)
-            viewModel.setDataColor(color?.text.toString())
+            viewModel.addViewToList()
 
 
             //binding.YarnColorNameText.setText(color?.text.toString())

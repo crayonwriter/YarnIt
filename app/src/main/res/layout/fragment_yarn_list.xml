@@ -4,6 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="yarnListViewModel"
+            type="com.crayonwriter.yarnit.YarnListViewModel" />
+    </data>
+
     <ScrollView
         android:id="@+id/testLayout"
         android:layout_width="match_parent"
