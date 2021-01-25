@@ -47,4 +47,3 @@ class YarnListViewModel : ViewModel() {
 
     //Todo: Call the method from the detail fragment that saves the added view? Not sure. Something to do with...
     //todo ... SaveButtonText.setOnClickListener
-}

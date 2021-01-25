@@ -36,9 +36,9 @@ class YarnListFragment : Fragment() {
             //viewModel.dataFromAddYarnColor.observe(viewLifecycleOwner, object: Observer<Any> {
               //  override fun onChanged(t: Any?) {
                //     addNewYarn.text = t.toString()
-            viewModel.dataFromAddYarnColor.observe(viewLifecycleOwner, Observer {newTextView ->
-                binding.addNewYarnTextView.text = newTextView.toString()
-            })
+//            viewModel.dataFromAddYarnColor.observe(viewLifecycleOwner, Observer {newTextView ->
+//                binding.addNewYarnTextView.text = newTextView.toString()
+//            })
 
 
         //Connect the FAB - Navigation, here in the UI Controller class
