@@ -10,11 +10,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.crayonwriter.yarnit.R
 import com.crayonwriter.yarnit.YarnlistViewModel
-import com.crayonwriter.yarnit.databinding.FragmentYarnListBinding
+import com.crayonwriter.yarnit.databinding.FragmentYarnlistBinding
 import timber.log.Timber
 
 class YarnlistFragment : Fragment() {
-    private lateinit var binding: FragmentYarnListBinding
+    private lateinit var binding: FragmentYarnlistBinding
     private lateinit var viewModel: YarnlistViewModel
 
         override fun onCreateView(
