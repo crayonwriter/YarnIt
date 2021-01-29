@@ -28,7 +28,6 @@ class YarnlistFragment : Fragment() {
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
             Timber.i("Called ViewModelProvider!!")
             viewModel = ViewModelProvider(this).get(YarnlistViewModel::class.java)
-            //viewModel.addViewToList(addNewYarnTextView)
 
         //TODO Add a view to the linear layout programatically
 
