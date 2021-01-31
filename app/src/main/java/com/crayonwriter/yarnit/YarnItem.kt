@@ -13,6 +13,7 @@ class YarnItem(context: Context?) : LinearLayout(context) {
 
     private var binding: YarnItemBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
             R.layout.yarn_item, this, false)
+//    val binding = YarnItemBinding.inflate(LayoutInflater.from(context))
 
     fun addViewToList(yarn: YarnDataClass) {
         binding.apply {
