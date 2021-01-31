@@ -11,9 +11,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.crayonwriter.yarnit.R
+import com.crayonwriter.yarnit.YarnDataClass
 import com.crayonwriter.yarnit.YarnItem
 import com.crayonwriter.yarnit.YarnlistViewModel
 import com.crayonwriter.yarnit.databinding.FragmentYarnlistBinding
+import com.crayonwriter.yarnit.databinding.YarnItemBinding
 import timber.log.Timber
 
 class YarnlistFragment : Fragment() {
@@ -32,7 +34,11 @@ class YarnlistFragment : Fragment() {
         Timber.i("Called ViewModelProvider!!")
         viewModel = ViewModelProvider(this).get(YarnlistViewModel::class.java)
 
-        //TODO Add a view to the linear layout programatically
+        //Add a view to the linear layout programatically
+        val yarnItemLayout = YarnItemBinding.inflate(inflater)
+        yarnItemLayout.yarnDataClass = YarnDataClass()
+        binding.addNewYarnLayout.addView(yarnItemLayout.root)
+
 
 
 //            var addNewYarn: View = binding.addNewYarnTextView
