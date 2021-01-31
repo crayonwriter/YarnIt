@@ -8,6 +8,10 @@ import timber.log.Timber
 
 class YarnlistViewModel : ViewModel() {
 
+    private val _yarn = MutableLiveData<MutableList<YarnDataClass>>(mutableListOf())
+    val yarn: LiveData<MutableList<YarnDataClass>>
+    get() = _yarn
+
     private val _liveColor = MutableLiveData<String>()
     val liveColor: LiveData<String>
         get() = _liveColor
@@ -48,6 +52,7 @@ class YarnlistViewModel : ViewModel() {
         super.onCleared()
         Timber.i("YarnListViewModel DESTROYED!!")
     }
+
 }
 
     //Method that adds a view to the list
