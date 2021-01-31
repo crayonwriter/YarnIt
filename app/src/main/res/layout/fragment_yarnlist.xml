@@ -4,18 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="yarnListViewModel"
             type="com.crayonwriter.yarnit.YarnlistViewModel" />
-    </data>
-
-    <data>
 
         <variable
             name="yarnItem"
             type="com.crayonwriter.yarnit.YarnItem" />
     </data>
+
 
     <ScrollView
         android:id="@+id/testLayout"

@@ -8,13 +8,12 @@
         <variable
             name="yarnListViewModel"
             type="com.crayonwriter.yarnit.YarnlistViewModel" />
-    </data>
 
-    <data>
         <variable
             name="yarnItem"
             type="com.crayonwriter.yarnit.YarnItem" />
     </data>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/AddYarnDetailFragment"

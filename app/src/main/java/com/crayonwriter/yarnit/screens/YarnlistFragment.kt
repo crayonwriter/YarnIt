@@ -56,16 +56,9 @@ class YarnlistFragment : Fragment() {
     }
 
     private fun addNewYarnLayout(yarnItem: YarnItem) {
-        val newYarnItem = LinearLayout(context.let {
-            viewModel.liveColor.value +
-                    viewModel.liveBrand.value +
-                    viewModel.liveWeight.value +
-                    viewModel.liveDescription
-            )
-        })
-
+        val newYarnItem = LinearLayout(context)
+        }
 
         val newYarnLayout: LinearLayout = binding.addNewYarnLayout
-        newYarnLayout.addView(newYarnItem)
+        //newYarnLayout.addView(newYarnItem)
     }
-}
