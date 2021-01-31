@@ -17,7 +17,6 @@ import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding
 class AddYarnDetailFragment : Fragment() {
     private lateinit var binding: FragmentAddYarnDetailBinding
     private lateinit var viewModel: YarnlistViewModel
-    private var color: EditText? = null
     private lateinit var layout: Layout
 
     override fun onCreateView(
@@ -32,8 +31,6 @@ class AddYarnDetailFragment : Fragment() {
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
         viewModel = ViewModelProvider(this).get(YarnlistViewModel::class.java)
       // viewModel.dataFromAddYarnColor.observe(LifecycleOwner {  })
-
-        color = binding.YarnColorName
 
         //TODO: Make the button be observable and have it call a method to update the YarnListFragment with a new textview
         binding.SaveButtonText.setOnClickListener {

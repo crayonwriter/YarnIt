@@ -28,13 +28,13 @@ class YarnlistViewModel : ViewModel() {
     val liveDescription: LiveData<String>
         get() = _liveDescription
 
-    fun saveData() {
+    fun saveNewYarnData() {
 
     }
 
-    //todo There should be data here to wrap as livedata. Which I think is dataFromAddYarnColor
+    //todo There should be data here to wrap as livedata.
     //todo The data should be observed by the fragment
-    //Define a MutableLiveData variable for the changed color field
+    //Define a MutableLiveData variable for the yarn list
     //var dataFromAddYarnColor = MutableLiveData<String>()
 
 //    //Create function to store color data to send between fragments
