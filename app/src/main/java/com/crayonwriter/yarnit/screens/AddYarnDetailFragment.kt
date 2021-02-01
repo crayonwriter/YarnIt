@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.crayonwriter.yarnit.R
@@ -16,7 +17,7 @@ import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding
 
 class AddYarnDetailFragment : Fragment() {
     private lateinit var binding: FragmentAddYarnDetailBinding
-    private lateinit var viewModel: YarnlistViewModel
+    private val viewModel: YarnlistViewModel by activityViewModels()
     private lateinit var layout: Layout
 
     override fun onCreateView(

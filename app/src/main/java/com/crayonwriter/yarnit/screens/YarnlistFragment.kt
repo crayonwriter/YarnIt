@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.crayonwriter.yarnit.R
@@ -20,7 +21,7 @@ import timber.log.Timber
 
 class YarnlistFragment : Fragment() {
     private lateinit var binding: FragmentYarnlistBinding
-    private lateinit var viewModel: YarnlistViewModel
+    private val viewModel: YarnlistViewModel by activityViewModels()
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -39,7 +40,7 @@ class YarnlistFragment : Fragment() {
         yarnItemLayout.yarnDataClass = YarnDataClass()
         binding.addNewYarnLayout.addView(yarnItemLayout.root)
 
-
+        binding.lifecycleOwner = this
 
 //            var addNewYarn: View = binding.addNewYarnTextView
 
