@@ -21,6 +21,7 @@ import timber.log.Timber
 
 class YarnlistFragment : Fragment() {
     private lateinit var binding: FragmentYarnlistBinding
+
     //Create shared viewmodel
     private val viewModel: YarnlistViewModel by activityViewModels()
 
@@ -32,9 +33,13 @@ class YarnlistFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_yarnlist, container, false)
 
+        binding.apply {
+            yarnListViewModel = viewModel
+
+        }
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
         Timber.i("Called ViewModelProvider!!")
-        viewModel = ViewModelProvider(this).get(YarnlistViewModel::class.java)
+        binding.yarnListViewModel = ViewModelProvider(this).get(YarnlistViewModel::class.java)
 
         //Add a view to the linear layout programatically
         val yarnItemLayout = YarnItemBinding.inflate(inflater)
@@ -63,10 +68,10 @@ class YarnlistFragment : Fragment() {
         return binding.root
     }
 
-    private fun addNewYarnLayout(yarnItem: YarnItem) {
-        val newYarnItem = LinearLayout(context)
-        }
-
-        val newYarnLayout: LinearLayout = binding.addNewYarnLayout
-        //newYarnLayout.addView(newYarnItem)
+//    private fun addNewYarnLayout(yarnItem: YarnItem) {
+//        val newYarnItem = LinearLayout(context)
+//        }
+//
+//        val newYarnLayout: LinearLayout = binding.addNewYarnLayout
+//        //newYarnLayout.addView(newYarnItem)
     }
