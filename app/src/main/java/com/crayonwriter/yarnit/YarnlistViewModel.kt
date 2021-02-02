@@ -1,34 +1,25 @@
 package com.crayonwriter.yarnit
 
 import android.view.View
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import timber.log.Timber
 
 class YarnlistViewModel : ViewModel() {
+private lateinit var yarnListList: MutableList<YarnDataClass>
 
+//Create mutablelist as LiveData
     private val _yarn = MutableLiveData<MutableList<YarnDataClass>>(mutableListOf())
     val yarn: LiveData<MutableList<YarnDataClass>>
     get() = _yarn
 
-    //This section of declaring variables individually will be deleted
+    //Create method to add a YarnDataClass object to the MutableList
+    private fun makeYarnList(newYarn: YarnDataClass) {
+        _yarn.value?.add(newYarn)
+    }
 
-//    private val _liveColor = MutableLiveData<String>()
-//    val liveColor: LiveData<String>
-//        get() = _liveColor
-//
-//    private val _liveBrand = MutableLiveData<String>()
-//    val liveBrand: LiveData<String>
-//        get() = _liveBrand
-//
-//    private val _liveWeight = MutableLiveData<String>()
-//    val liveWeight: LiveData<String>
-//        get() = _liveWeight
-//
-//    private val _liveDescription = MutableLiveData<String>()
-//    val liveDescription: LiveData<String>
-//        get() = _liveDescription
 
     fun saveNewYarnData() {
 

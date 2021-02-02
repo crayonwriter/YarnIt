@@ -68,6 +68,11 @@ class YarnlistFragment : Fragment() {
         return binding.root
     }
 
+private fun
+}
+}
+}
+
 //    private fun addNewYarnLayout(yarnItem: YarnItem) {
 //        val newYarnItem = LinearLayout(context)
 //        }
