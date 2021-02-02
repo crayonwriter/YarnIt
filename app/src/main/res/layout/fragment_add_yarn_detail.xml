@@ -10,8 +10,8 @@
             type="com.crayonwriter.yarnit.YarnlistViewModel" />
 
         <variable
-            name="yarnItem"
-            type="com.crayonwriter.yarnit.YarnItem" />
+            name="yarnDataClass"
+            type="com.crayonwriter.yarnit.YarnDataClass" />
     </data>
 
 
@@ -39,6 +39,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:ems="10"
+            android:text="@{yarnDataClass.yarnColorName}"
             android:hint="@string/yarn_color_name"
             android:inputType="textPersonName"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:text="@{yarnDataClass.yarnCompanyBrand}"
             android:hint="@string/yarn_company_brand"
             android:inputType="textPersonName"
             app:layout_constraintStart_toStartOf="@+id/YarnColorName"
@@ -71,6 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:text="@{yarnDataClass.yarnWeight}"
             android:hint="@string/yarn_weight"
             android:inputType="textPersonName"
             app:layout_constraintStart_toStartOf="@+id/YarnCompanyBrand"
@@ -81,6 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:text="@{yarnDataClass.yarnDescriptionType}"
             android:hint="@string/yarn_description_type"
             android:inputType="textPersonName"
             app:layout_constraintStart_toStartOf="@+id/YarnWeight"
