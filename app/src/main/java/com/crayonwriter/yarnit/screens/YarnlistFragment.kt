@@ -21,6 +21,7 @@ import timber.log.Timber
 
 class YarnlistFragment : Fragment() {
     private lateinit var binding: FragmentYarnlistBinding
+    //Create shared viewmodel
     private val viewModel: YarnlistViewModel by activityViewModels()
 
     override fun onCreateView(

@@ -17,6 +17,7 @@ import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding
 
 class AddYarnDetailFragment : Fragment() {
     private lateinit var binding: FragmentAddYarnDetailBinding
+    //Create shared viewmodel
     private val viewModel: YarnlistViewModel by activityViewModels()
     private lateinit var layout: Layout
 

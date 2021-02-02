@@ -12,21 +12,23 @@ class YarnlistViewModel : ViewModel() {
     val yarn: LiveData<MutableList<YarnDataClass>>
     get() = _yarn
 
-    private val _liveColor = MutableLiveData<String>()
-    val liveColor: LiveData<String>
-        get() = _liveColor
+    //This section of declaring variables individually will be deleted
 
-    private val _liveBrand = MutableLiveData<String>()
-    val liveBrand: LiveData<String>
-        get() = _liveBrand
-
-    private val _liveWeight = MutableLiveData<String>()
-    val liveWeight: LiveData<String>
-        get() = _liveWeight
-
-    private val _liveDescription = MutableLiveData<String>()
-    val liveDescription: LiveData<String>
-        get() = _liveDescription
+//    private val _liveColor = MutableLiveData<String>()
+//    val liveColor: LiveData<String>
+//        get() = _liveColor
+//
+//    private val _liveBrand = MutableLiveData<String>()
+//    val liveBrand: LiveData<String>
+//        get() = _liveBrand
+//
+//    private val _liveWeight = MutableLiveData<String>()
+//    val liveWeight: LiveData<String>
+//        get() = _liveWeight
+//
+//    private val _liveDescription = MutableLiveData<String>()
+//    val liveDescription: LiveData<String>
+//        get() = _liveDescription
 
     fun saveNewYarnData() {
 
