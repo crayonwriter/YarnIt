@@ -16,7 +16,7 @@ private lateinit var yarnListList: MutableList<YarnDataClass>
     get() = _yarn
 
     //Create method to add a YarnDataClass object to the MutableList
-    private fun makeYarnList(newYarn: YarnDataClass) {
+    fun addYarnToList(newYarn: YarnDataClass) {
         _yarn.value?.add(newYarn)
     }
 
