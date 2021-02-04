@@ -20,16 +20,16 @@
         android:label="fragment_instructions"
         tools:layout="@layout/fragment_instructions" >
         <action
-            android:id="@+id/action_fragment_instructions_to_yarnListFragment"
-            app:destination="@id/yarnListFragment" />
+            android:id="@+id/action_fragment_instructions_to_yarnlistFragment"
+            app:destination="@id/yarnlistFragment" />
     </fragment>
     <fragment
-        android:id="@+id/yarnListFragment"
+        android:id="@+id/yarnlistFragment"
         android:name="com.crayonwriter.yarnit.screens.YarnlistFragment"
         android:label="fragment_yarn_list"
         tools:layout="@layout/fragment_yarnlist" >
         <action
-            android:id="@+id/action_yarnListFragment_to_addYarnDetailFragment"
+            android:id="@+id/action_yarnlistFragment_to_addYarnDetailFragment"
             app:destination="@id/addYarnDetailFragment" />
     </fragment>
     <fragment
@@ -38,8 +38,8 @@
         android:label="fragment_add_yarn_detail"
         tools:layout="@layout/fragment_add_yarn_detail" >
         <action
-            android:id="@+id/action_addYarnDetailFragment_to_yarnListFragment"
-            app:destination="@id/yarnListFragment" />
+            android:id="@+id/action_addYarnDetailFragment_to_yarnlistFragment"
+            app:destination="@id/yarnlistFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"

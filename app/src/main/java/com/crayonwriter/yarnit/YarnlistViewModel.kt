@@ -15,30 +15,14 @@ private lateinit var yarnListList: MutableList<YarnDataClass>
     val yarn: LiveData<MutableList<YarnDataClass>>
     get() = _yarn
 
-    //Create method to add a YarnDataClass object to the MutableList
+    //Create method to add a YarnDataClass object to the MutableList. This is when the Save button is pressed
     fun addYarnToList(newYarn: YarnDataClass) {
         _yarn.value?.add(newYarn)
+        Timber.i("Data SAVED!")
     }
-
-
-    fun saveNewYarnData() {
-
-    }
-
-    //todo There should be data here to wrap as livedata.
-    //todo The data should be observed by the fragment
-    //Define a MutableLiveData variable for the yarn list
-    //var dataFromAddYarnColor = MutableLiveData<String>()
-
-//    //Create function to store color data to send between fragments
-//    fun setDataColor(color: String){
-//        dataFromAddYarnColor.setValue(color)
-//    }
 
     init {
         Timber.i("YarnListViewModel CREATED!")
-
-        //addViewToList(newTextView)
     }
 
     override fun onCleared() {

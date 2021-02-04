@@ -23,7 +23,7 @@ private lateinit var binding: FragmentInstructionsBinding
 
        //Navigation - belongs in this UI Controller class
        binding.listButton.setOnClickListener(
-               Navigation.createNavigateOnClickListener(R.id.action_fragment_instructions_to_yarnListFragment)
+               Navigation.createNavigateOnClickListener(R.id.action_fragment_instructions_to_yarnlistFragment)
        )
 
        return binding.root
