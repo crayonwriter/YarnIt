@@ -41,7 +41,7 @@
             android:ems="10"
             android:hint="@string/yarn_color_name"
             android:inputType="textPersonName"
-            android:text="@{yarnDataClass.yarnColorName}"
+            android:text="@={yarnDataClass.yarnColorName}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/AddYarnDetailTitle" />
 
@@ -64,7 +64,7 @@
             android:ems="10"
             android:hint="@string/yarn_company_brand"
             android:inputType="textPersonName"
-            android:text="@{yarnDataClass.yarnCompanyBrand}"
+            android:text="@={yarnDataClass.yarnCompanyBrand}"
             app:layout_constraintStart_toStartOf="@+id/YarnColorName"
             app:layout_constraintTop_toBottomOf="@+id/YarnColorName" />
 
@@ -75,9 +75,10 @@
             android:ems="10"
             android:hint="@string/yarn_weight"
             android:inputType="textPersonName"
-            android:text="@{yarnDataClass.yarnWeight}"
+            android:text="@={yarnDataClass.yarnWeight}"
             app:layout_constraintStart_toStartOf="@+id/YarnCompanyBrand"
-            app:layout_constraintTop_toBottomOf="@+id/YarnCompanyBrand" />
+            app:layout_constraintTop_toBottomOf="@+id/YarnCompanyBrand"
+            tools:ignore="TextFields" />
 
         <EditText
             android:id="@+id/YarnDescriptionType"
@@ -86,7 +87,7 @@
             android:ems="10"
             android:hint="@string/yarn_description_type"
             android:inputType="textPersonName"
-            android:text="@{yarnDataClass.yarnDescriptionType}"
+            android:text="@={yarnDataClass.yarnDescriptionType}"
             app:layout_constraintStart_toStartOf="@+id/YarnWeight"
             app:layout_constraintTop_toBottomOf="@+id/YarnWeight" />
 
