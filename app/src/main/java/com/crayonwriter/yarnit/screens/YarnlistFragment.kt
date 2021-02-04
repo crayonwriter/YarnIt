@@ -21,6 +21,7 @@ import timber.log.Timber
 
 class YarnlistFragment : Fragment() {
     private lateinit var binding: FragmentYarnlistBinding
+    var yarnDataClass = YarnDataClass("", "", "", "")
 
     //Create shared viewmodel
     private val viewModel: YarnlistViewModel by activityViewModels()
@@ -67,11 +68,6 @@ class YarnlistFragment : Fragment() {
 
         return binding.root
     }
-
-private fun
-}
-}
-}
 
 //    private fun addNewYarnLayout(yarnItem: YarnItem) {
 //        val newYarnItem = LinearLayout(context)
