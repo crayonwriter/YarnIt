@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.crayonwriter.yarnit.R
+import com.crayonwriter.yarnit.YarnDataClass
 import com.crayonwriter.yarnit.YarnlistViewModel
 import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding
 
@@ -33,6 +34,7 @@ class AddYarnDetailFragment : Fragment() {
 
         binding.apply {
             yarnListViewModel = viewModel
+            yarnDataClass = YarnDataClass()
         }
 
 //        viewModel.yarn.observe(viewLifecycleOwner, {
