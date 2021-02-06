@@ -18,7 +18,7 @@ import timber.log.Timber
 
 class YarnlistFragment : Fragment() {
     private lateinit var binding: FragmentYarnlistBinding
-    var yarnDataClass = YarnDataClass("", "", "", "")
+    private lateinit var yarnDataClass : YarnDataClass
 
     //Create shared viewmodel
     private val viewModel: YarnlistViewModel by activityViewModels()
@@ -33,6 +33,7 @@ class YarnlistFragment : Fragment() {
 
         binding.apply {
             yarnListViewModel = viewModel
+            yarnDataClass = YarnDataClass()
         }
 
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider

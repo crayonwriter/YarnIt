@@ -35,12 +35,12 @@ class AddYarnDetailFragment : Fragment() {
             yarnListViewModel = viewModel
         }
 
-        viewModel.yarn.observe(viewLifecycleOwner, {
-            if (isAdded()) {
-                this.findNavController()
-                    .navigate(R.id.action_addYarnDetailFragment_to_yarnlistFragment)
-            }
-        })
+//        viewModel.yarn.observe(viewLifecycleOwner, {
+//            if (isAdded()) {
+//                this.findNavController()
+//                    .navigate(R.id.action_addYarnDetailFragment_to_yarnlistFragment)
+//            }
+//        })
 
 
         return binding.root
