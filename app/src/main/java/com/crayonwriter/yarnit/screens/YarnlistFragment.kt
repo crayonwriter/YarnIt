@@ -5,13 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.iterator
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.crayonwriter.yarnit.R
 import com.crayonwriter.yarnit.YarnDataClass
 import com.crayonwriter.yarnit.YarnlistViewModel
+import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding.inflate
 import com.crayonwriter.yarnit.databinding.FragmentYarnlistBinding
 import com.crayonwriter.yarnit.databinding.YarnItemBinding
 import timber.log.Timber
@@ -19,6 +22,7 @@ import timber.log.Timber
 class YarnlistFragment : Fragment() {
     private lateinit var binding: FragmentYarnlistBinding
     private lateinit var yarnDataClass : YarnDataClass
+    private lateinit var yarnList : LiveData<MutableList<YarnDataClass>>
 
     //Create shared viewmodel
     private val viewModel: YarnlistViewModel by activityViewModels()
@@ -41,11 +45,26 @@ class YarnlistFragment : Fragment() {
         binding.yarnListViewModel = ViewModelProvider(this).get(YarnlistViewModel::class.java)
 
         //Add a view to the linear layout programatically
-        val yarnItemLayout = YarnItemBinding.inflate(inflater)
-        yarnItemLayout.yarnDataClass = YarnDataClass()
-        binding.addNewYarnLayout.addView(yarnItemLayout.root)
+        //val yarnItemLayout = YarnItemBinding.inflate(inflater)
+       // yarnItemLayout.yarnDataClass = YarnDataClass()
+        //binding.addNewYarnLayout.addView(yarnItemLayout.root)
 
         binding.lifecycleOwner = this
+
+//        viewModel.yarnList.observe(viewLifecycleOwner, {
+//            for (yarn in it) {
+//                val yarnItemLayout = YarnItemBinding.inflate(inflater)
+//                yarnItemLayout.yarnDataClass = yarn
+//                binding.addNewYarnLayout.addView(yarnItemLayout.root)
+
+        viewModel.yarnList.observe(viewLifecycleOwner, {
+            for (yarn in it) {
+                var layout = YarnItemBinding.inflate(inflater)
+                layout.yarnDataClass = yarn
+                binding.addNewYarnLayout.addView(R.layout.yarn_item)
+
+            }
+        })
 
         //Connect the FAB - Navigation, here in the UI Controller class
         binding.floatingActionButton2.setOnClickListener(
