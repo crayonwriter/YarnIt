@@ -8,6 +8,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.crayonwriter.yarnit.R
 import com.crayonwriter.yarnit.YarnDataClass
 import com.crayonwriter.yarnit.YarnlistViewModel
@@ -70,5 +72,13 @@ class YarnlistFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater?.inflate(R.menu.overflow_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(
+            item!!,
+            requireView().findNavController()
+        )
+                || super.onOptionsItemSelected(item)
     }
 }
