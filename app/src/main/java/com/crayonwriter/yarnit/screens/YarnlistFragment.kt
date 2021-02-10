@@ -21,15 +21,15 @@ import timber.log.Timber
 
 class YarnlistFragment : Fragment() {
     private lateinit var binding: FragmentYarnlistBinding
-    private lateinit var yarnDataClass : YarnDataClass
-    private lateinit var yarnList : LiveData<MutableList<YarnDataClass>>
+    private lateinit var yarnDataClass: YarnDataClass
+    private lateinit var yarnList: LiveData<MutableList<YarnDataClass>>
 
     //Create shared viewmodel
     private val viewModel: YarnlistViewModel by activityViewModels()
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
 
     ): View? {
         // Inflate the layout for this fragment
@@ -43,12 +43,6 @@ class YarnlistFragment : Fragment() {
         //Get a reference to the ViewModel by requesting it from the ViewModelProvider
         Timber.i("Called ViewModelProvider!!")
         binding.yarnListViewModel = ViewModelProvider(this).get(YarnlistViewModel::class.java)
-
-        //Add a view to the linear layout programatically
-        //val yarnItemLayout = YarnItemBinding.inflate(inflater)
-       // yarnItemLayout.yarnDataClass = YarnDataClass()
-        //binding.addNewYarnLayout.addView(yarnItemLayout.root)
-
         binding.lifecycleOwner = this
 
 //        viewModel.yarnList.observe(viewLifecycleOwner, {
@@ -57,6 +51,7 @@ class YarnlistFragment : Fragment() {
 //                yarnItemLayout.yarnDataClass = yarn
 //                binding.addNewYarnLayout.addView(yarnItemLayout.root)
 
+        //Add a view to the linear layout programatically
         viewModel.yarnList.observe(viewLifecycleOwner, {
             for (yarn in it) {
                 var layout = YarnItemBinding.inflate(inflater)
@@ -68,16 +63,9 @@ class YarnlistFragment : Fragment() {
 
         //Connect the FAB - Navigation, here in the UI Controller class
         binding.floatingActionButton2.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_yarnlistFragment_to_addYarnDetailFragment)
+            Navigation.createNavigateOnClickListener(R.id.action_yarnlistFragment_to_addYarnDetailFragment)
         )
 
         return binding.root
     }
-
-//    private fun addNewYarnLayout(yarnItem: YarnItem) {
-//        val newYarnItem = LinearLayout(context)
-//        }
-//
-//        val newYarnLayout: LinearLayout = binding.addNewYarnLayout
-//        //newYarnLayout.addView(newYarnItem)
-    }
+}
