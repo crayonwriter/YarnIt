@@ -61,7 +61,7 @@ class YarnlistFragment : Fragment() {
             for (yarn in it) {
                 var layout = YarnItemBinding.inflate(inflater)
                 layout.yarnDataClass = yarn
-                binding.addNewYarnLayout.addView(R.layout.yarn_item)
+                binding.addNewYarnLayout.addView(layout.root)
 
             }
         })
