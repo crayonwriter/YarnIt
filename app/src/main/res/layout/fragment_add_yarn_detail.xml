@@ -14,6 +14,8 @@
             type="com.crayonwriter.yarnit.YarnDataClass" />
     </data>
 
+<!-- ConstraintLayout makes sense here so it's easier to have the buttons at various
+heights, and because it's more versatile in case future changes need to be made -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/AddYarnDetailFragment"

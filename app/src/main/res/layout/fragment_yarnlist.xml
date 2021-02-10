@@ -13,6 +13,7 @@
             type="com.crayonwriter.yarnit.YarnItem" />
     </data>
 
+<!-- The documentation suggested using NestedScrollView instead of ScrollView. -->
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/testLayout"
@@ -20,6 +21,9 @@
         android:layout_height="match_parent"
         android:fillViewport="true"
         tools:context=".screens.YarnlistFragment">
+
+        <!-- ConstraintLayout makes sense here so it's easier to have the buttons at various
+heights, and because it's more versatile in case future changes need to be made -->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/yarnlist_layout"

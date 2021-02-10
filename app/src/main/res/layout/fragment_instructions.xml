@@ -4,7 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-<androidx.constraintlayout.widget.ConstraintLayout
+    <!-- ConstraintLayout makes sense here so it's easier to have the buttons at various
+heights, and because it's more versatile in case future changes need to be made -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/instructionsFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
