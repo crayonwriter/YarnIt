@@ -40,4 +40,5 @@
     <string name="bulkyWeight">Bulky</string>
     <string name="cottonAcrylicYarnType"><![CDATA[Cotton & Acrylic]]></string>
     <string name="addYarnButtonText">Add New Yarn</string>
+    <string name="logout">Logout</string>
 </resources>

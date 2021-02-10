@@ -6,11 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.crayonwriter.yarnit.R
 import com.crayonwriter.yarnit.YarnDataClass
@@ -19,6 +21,7 @@ import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding
 
 class AddYarnDetailFragment : Fragment() {
     private lateinit var binding: FragmentAddYarnDetailBinding
+
 
     //Create shared viewmodel
     private val viewModel: YarnlistViewModel by activityViewModels()
@@ -36,6 +39,12 @@ class AddYarnDetailFragment : Fragment() {
             yarnListViewModel = viewModel
             yarnDataClass = YarnDataClass()
         }
+
+        //binding.SaveButtonText.findNavController().navigate(AddYarnDetailFragmentDirections.actionAddYarnDetailFragmentToYarnlistFragment())
+//        binding.SaveButtonText.setOnClickListener {
+//        view -> view.findNavController().navigate(AddYarnDetailFragmentDirections.actionAddYarnDetailFragmentToYarnlistFragment())
+//        }
+
 
 //        viewModel.yarn.observe(viewLifecycleOwner, {
 //            if (isAdded()) {

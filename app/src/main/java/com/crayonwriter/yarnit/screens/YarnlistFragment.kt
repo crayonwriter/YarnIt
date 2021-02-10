@@ -1,20 +1,18 @@
 package com.crayonwriter.yarnit.screens
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.core.view.iterator
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.crayonwriter.yarnit.R
 import com.crayonwriter.yarnit.YarnDataClass
 import com.crayonwriter.yarnit.YarnlistViewModel
-import com.crayonwriter.yarnit.databinding.FragmentAddYarnDetailBinding.inflate
 import com.crayonwriter.yarnit.databinding.FragmentYarnlistBinding
 import com.crayonwriter.yarnit.databinding.YarnItemBinding
 import timber.log.Timber
@@ -66,6 +64,21 @@ class YarnlistFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_yarnlistFragment_to_addYarnDetailFragment)
         )
 
+        //Connect menu to this fragment
+        setHasOptionsMenu(true)
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater?.inflate(R.menu.overflow_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(
+            item!!,
+            requireView().findNavController()
+        )
+                || super.onOptionsItemSelected(item)
     }
 }
