@@ -26,7 +26,7 @@ class LoginFragment : Fragment() {
         binding.addNewLoginButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment)
         )
-        
+
         return binding.root
     }
 
