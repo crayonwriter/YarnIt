@@ -40,20 +40,11 @@ class AddYarnDetailFragment : Fragment() {
             yarnDataClass = YarnDataClass()
         }
 
-        //binding.SaveButtonText.findNavController().navigate(AddYarnDetailFragmentDirections.actionAddYarnDetailFragmentToYarnlistFragment())
-//        binding.SaveButtonText.setOnClickListener {
-//        view -> view.findNavController().navigate(AddYarnDetailFragmentDirections.actionAddYarnDetailFragmentToYarnlistFragment())
-//        }
-
-
-//        viewModel.yarn.observe(viewLifecycleOwner, {
-//            if (isAdded()) {
-//                this.findNavController()
-//                    .navigate(R.id.action_addYarnDetailFragment_to_yarnlistFragment)
-//            }
-//        })
-
-
+        viewModel.yarnAddedEvent.observe(viewLifecycleOwner, { isAdded ->
+            if (isAdded) {
+                this.findNavController().navigateUp()
+            }
+        })
         return binding.root
     }
 }

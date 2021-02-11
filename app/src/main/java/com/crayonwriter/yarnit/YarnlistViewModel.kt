@@ -1,5 +1,6 @@
 package com.crayonwriter.yarnit
 
+import SingleLiveEvent
 import android.app.Activity
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -21,9 +22,12 @@ class YarnlistViewModel : ViewModel() {
     val yarnList: LiveData<MutableList<YarnDataClass>>
     get() = _yarnList
 
+    val yarnAddedEvent = SingleLiveEvent<Boolean>()
+
     //Create method to add a YarnDataClass object to the MutableList. This is when the Save button is pressed
     fun addYarnToList(newYarn: YarnDataClass) {
         _yarnList.value?.add(newYarn)
+        yarnAddedEvent.value = true
         //findNavController().navigate(AddYarnDetailFragmentDirections.actionAddYarnDetailFragmentToYarnlistFragment())
         Timber.i("Data SAVED!")
     }
